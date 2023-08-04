@@ -1,0 +1,47 @@
+
+<!DOCTYPE html> <!--yahir come tierra asjasjasjasjasjasj-->
+<html lang="es">
+    <head> 
+        <%- include('../secciones/head'); %>
+    </head>
+    <body class="d-flex flex-column min-vh-100">
+        <main>
+            <div class="container">
+                <%- include('../secciones/menu'); %>
+                <div class="row mt-5">
+                    <div class="col-2"></div>
+                    <div class="col-8">
+                        <form action="/guardarEmpleado" method="post">
+                            <div class="card">
+                                <div class="card-header bg-success">
+                                    <h1 class="text-white">Insertar empleado</h1>
+                                </div>
+                                <div class="card-body">
+                                    <input type="text" class="form-control mb-3" name="nombre" id="nombre" placeholder="Nombre del empleado" />
+                                    <input type="text" class="form-control mb-3" name="ocupacion" id="ocupacion" placeholder="Ocupacion del empleado" />
+                                    <input type="text" class="form-control mb-3" name="telefono" id="telefono" placeholder="Télefono del empleado" />
+                                    <input type="text" class="form-control mb-3" name="direccion" id="direccion" placeholder="Dirección del empleado" />
+                                    <input type="text" class="form-control mb-3" name="sueldo" id="sueldo" placeholder="Sueldo del empleado" />
+                                    <input type="file" class="form-control mv-3" name="foto" id="foto" placeholder="Foto del empleado">
+                                </div>
+                                <div class="card-footer">
+                                    <a class="btn btn-secondary mb-3 mt-3" href="/listarEmpleado">
+                                        Cancelar
+                                    </a>
+                                    <button class="btn btn-primary mb-3 mt-3" type="submit">
+                                        Guardar Empleado
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-2"></div>
+                </div>
+
+            </div>
+        </main>
+        <footer class="footer mt-auto py-3 bg-light">
+            <%- include('../secciones/footer'); %>
+        </footer>
+    </body>
+</html>
